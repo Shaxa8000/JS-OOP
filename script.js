@@ -164,13 +164,58 @@ IS JS setTimeout()
 
 // console.log(isRightTriangle(3, 4, 5));
 
-setTimeout(() => {
-    document.body.style.backgroundColor = 'red'
-}, 1000);
 
-setTimeout(() => {
-  document.body.style.backgroundColor = 'orange';
-}, 3000);
+
+//<<< JS PROMISE>>>>
+
+
+// let p = new Promise((resolve, reject) => {
+//     let a = 1 + 2
+//     if (a == 2) {
+//         resolve('Success')
+//     } else {
+//         reject('Failed')
+//     }
+// })
+
+// p.then((message) => {
+//     console.log('This is in the then ' + message)
+// }).catch((message) => {
+//     console.log('This is in the catch ' + message)
+// });
+
+
+// 2- Example
+
+const userLeft = false;
+const userWatchingCatMeme = false;
+
+function watchTutorialPromise() {
+    return new Promise((resolve, reject) => {
+        if (userLeft) {
+            reject({
+                name: 'User left',
+                message: ':('
+            })
+        } else if ('User Watching cat meme,') {
+            reject({
+                name: 'User Watching cat meme',
+                message: 'WebDevSimplified < Cat'
+          })
+        } else {
+            resolve('Thumbs up and Subscribe')
+        }
+    })
+}
+
+
+watchTutorialPromise().then((message) => {
+    console.log('Success: ' + message)
+}).catch((error) => {
+    console.log(error.name + ' ' + error.message);
+});
+
+
 
 
 
