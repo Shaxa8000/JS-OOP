@@ -67,6 +67,29 @@
 
 // console.log(myCar.show()); => I have a Gentra, it is a GM.
 
+// Another example
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     speak() {
+//         console.log(`${this.name} makes a noise.`)
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor(name) {
+//         super(name);
+//     }
+//     speak() {
+//         console.log(`${this.name} barks.`)
+//     }
+// }
+
+
+// let d = new Dog('Killer');
+// d.speak();
 
 //<<< JS CLASS GETTERS AND SETTERS>>>
 
@@ -187,33 +210,33 @@ IS JS setTimeout()
 
 // 2- Example
 
-const userLeft = false;
-const userWatchingCatMeme = false;
+// const userLeft = false;
+// const userWatchingCatMeme = false;
 
-function watchTutorialPromise() {
-    return new Promise((resolve, reject) => {
-        if (userLeft) {
-            reject({
-                name: 'User left',
-                message: ':('
-            })
-        } else if ('User Watching cat meme,') {
-            reject({
-                name: 'User Watching cat meme',
-                message: 'WebDevSimplified < Cat'
-          })
-        } else {
-            resolve('Thumbs up and Subscribe')
-        }
-    })
-}
+// function watchTutorialPromise() {
+//     return new Promise((resolve, reject) => {
+//         if (userLeft) {
+//             reject({
+//                 name: 'User left',
+//                 message: ':('
+//             })
+//         } else if ('User Watching cat meme,') {
+//             reject({
+//                 name: 'User Watching cat meme',
+//                 message: 'WebDevSimplified < Cat'
+//           })
+//         } else {
+//             resolve('Thumbs up and Subscribe')
+//         }
+//     })
+// }
 
 
-watchTutorialPromise().then((message) => {
-    console.log('Success: ' + message)
-}).catch((error) => {
-    console.log(error.name + ' ' + error.message);
-});
+// watchTutorialPromise().then((message) => {
+//     console.log('Success: ' + message)
+// }).catch((error) => {
+//     console.log(error.name + ' ' + error.message);
+// });
 
 
 
